@@ -1,0 +1,19 @@
+.DataParser {
+    text-align: center;
+}
+
+.btn {
+    background-color: #FF9800;
+    color: #FFFFFF;
+    border: none;
+    font-size: 24px;
+    padding: 15px 25px;
+    width: 150px;
+    margin: 25px;
+    border-radius: 3px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+    background-color: #FF6F00;
+}

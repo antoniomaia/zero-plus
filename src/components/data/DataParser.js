@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactFileReader from "react-file-reader";
 import { csvJSON } from "./../../helpers";
+import './DataParser.css';
 
 class File extends Component {
   constructor() {
@@ -28,7 +29,7 @@ class File extends Component {
 
   render() {
     return (
-      <div>
+      <div className="DataParser">
         <ReactFileReader handleFiles={this.handleFiles} fileTypes={".csv"}>
           <button className="btn">Upload</button>
         </ReactFileReader>
