@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactFileReader from "react-file-reader";
-import { csvJSON } from "./../../helpers";
 import "./DataParser.css";
+import csv from "csvtojson";
 
 class File extends Component {
   updateData(result) {
@@ -12,8 +12,11 @@ class File extends Component {
     const reader = new FileReader();
 
     reader.onload = e => {
-      const dataJSON = csvJSON(reader.result);
-      this.updateData(dataJSON);
+      csv()
+        .fromString(reader.result)
+        .on("end_parsed", jsonArrObj => {
+          this.updateData(JSON.stringify(jsonArrObj));
+        });
     };
 
     reader.readAsText(files[0]);

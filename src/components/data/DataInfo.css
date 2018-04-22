@@ -1,0 +1,8 @@
+.DataInfo {
+    height: 0;
+}
+.DataInfoWrapper {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+}
