@@ -1,21 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import "./index.css";
-import registerServiceWorker from "./registerServiceWorker";
 import Header from "./components/common/Header";
 import Main from './components/common/Main';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <Header />
         <Route path="/" component={Main} />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
-registerServiceWorker();
